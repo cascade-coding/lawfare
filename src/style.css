@@ -1,10 +1,17 @@
 @import "tailwindcss";
+@tailwind utilities;
+
+@theme {
+  --color-primary: #1A1A1A;
+
+
+  --font-base: "Inter", sans-serif;
+  --font-primary: "Playfair Display", serif;
+  --font-secondary: "Cormorant Garamond", serif;
+
+
+}
 
 body {
   font-family: "Inter", sans-serif;
-
-  /* font-family: "Playfair Display", serif; */
-  /* font-family: "Cormorant Garamond", serif; */
 }
-
-

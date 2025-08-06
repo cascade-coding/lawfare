@@ -13,7 +13,35 @@
     <title>LAWFARE</title>
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline text-red-500">Hello world!</h1>
+    <nav class="flex flex-col py-3">
+      <div class="container mx-auto px-2">
+        <div class="flex items-center justify-end">
+          <button
+            class="flex items-center justify-center gap-x-2 bg-gray-100 px-2 py-1.5 rounded-sm font-semibold text-primary"
+          >
+            <div x-data="iconComponent('call', '')" x-html="icon"></div>
+            <span>Free Legal Call (555) 123-4567 </span>
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div x-data="iconComponent('logo', '!w-[220px]')" x-html="icon"></div>
+
+          <ul class="flex items-center justify-center gap-x-16">
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Victories</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
