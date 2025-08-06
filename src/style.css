@@ -2,16 +2,30 @@
 @tailwind utilities;
 
 @theme {
-  --color-primary: #1A1A1A;
-
+  --color-primary: #1a1a1a;
+  --color-accent: #9b1b30;
+  --color-accent-dark-1: #801525;
+  --color-accent-dark-2: #660f1a;
 
   --font-base: "Inter", sans-serif;
   --font-primary: "Playfair Display", serif;
   --font-secondary: "Cormorant Garamond", serif;
-
-
 }
 
 body {
   font-family: "Inter", sans-serif;
+}
+
+@layer utilities {
+  @media (min-width: 530px) and (max-width: 620px) {
+    .w-custom-range-img {
+      width: 280px;
+    }
+  }
+
+  @media (max-width: 340px) {
+    .w-custom-range-img-xs {
+      width: 160px;
+    }
+  }
 }

@@ -13,8 +13,9 @@
     <title>LAWFARE</title>
   </head>
   <body>
-    <nav class="flex flex-col py-3">
-      <div class="container mx-auto px-2">
+    <!-- Start: Top Header -->
+    <nav class="py-3 hidden md:block">
+      <div class="max-w-[1280px] mx-auto px-3">
         <div class="flex items-center justify-end">
           <button
             class="flex items-center justify-center gap-x-2 bg-gray-100 px-2 py-1.5 rounded-sm font-semibold text-primary"
@@ -22,10 +23,13 @@
             <div x-data="iconComponent('call', '')" x-html="icon"></div>
             <span>Free Legal Call (555) 123-4567 </span>
           </button>
-        </div>
+        </div> 
 
         <div class="flex items-center justify-between">
-          <div x-data="iconComponent('logo', '!w-[220px]')" x-html="icon"></div>
+          <div
+            x-data="iconComponent('logo', 'w-[120px] md:w-[190px] 2xl:w-[220px]')"
+            x-html="icon"
+          ></div>
 
           <ul class="flex items-center justify-center gap-x-16">
             <li>
@@ -41,6 +45,63 @@
         </div>
       </div>
     </nav>
+
+    <!-- End: Top Header -->
+
+    <!-- Start: Hero Section -->
+
+    <section class="relative md:h-[600px] h-[500px] overflow-hidden text-white">
+      <img
+        src="/assets/hero-bg.jpg"
+        alt=""
+        class="absolute inset-0 w-full h-full object-cover z-0 opacity-30"
+        loading="lazy"
+      />
+
+      <!-- <div class="absolute inset-0 bg-black/50 z-0"></div> -->
+
+      <!-- overlay -->
+      <div
+        class="relative z-20 flex flex-col items-start justify-start h-full max-w-[1280px] mx-auto px-3"
+      >
+        <div class="pt-20 flex flex-col gap-y-5 lg:max-w-4xl 2xl:max-w-5xl">
+          <h1
+            class="font-primary font-bold leading-[120%] tracking-[0.8px] text-[28px] md:text-[56px] xl:text-[64px] 2xl:text-[90px] text-accent"
+          >
+            Focused on Results. Relentless Execution.
+          </h1>
+          <h5
+            class="font-secondary font-bold leading-[120%] tracking-[0.5px] text-[22px] md:text-[28px] lg:text-[32px] xl:text-[34px] text-primary"
+          >
+            Litigation that works. Counsel that wins.
+          </h5>
+        </div>
+
+        <div class="pt-6 flex flex-col gap-y-5">
+          <button
+            class="bg-accent w-max font-normal sm:font-semibold py-1.5 px-4 sm:py-2.5 sm:px-7 rounded-sm tracking-[0.8px] border-2 border-accent-dark-2 text-gray-50 hover:cursor-pointer hover:bg-accent-dark-1 transition"
+          >
+            Start Your Case
+          </button>
+
+          <h5
+            class="font-secondary font-semibold leading-[120%] tracking-[0.5px]  md:text-[18px] text-primary pl-3 py-2 rounded-md border-l-4 border-l-accent-dark-2"
+          >
+            Victor Kane <br />
+            Senior Litigation Attorney
+          </h5>
+        </div>
+      </div>
+
+      <div class="absolute -right-4 sm:right-0 inset-0 z-10 flex justify-end items-end">
+        <img
+          src="/assets/lawyer.png"
+          alt=""
+          class="w-custom-range-img-xs w-[200px] w-custom-range-img sm:w-[320px] md:w-[330px] lg:w-[420px] xl:w-[480px]"
+          loading="lazy"
+        />
+      </div>
+    </section>
 
     <script type="module" src="/src/main.ts"></script>
   </body>
