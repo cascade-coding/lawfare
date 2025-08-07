@@ -28,8 +28,15 @@ export const icons: Record<string, (classes?: string) => string> = {
           </defs>
         </svg>
 `,
+    'line': (classes = '') => `<svg width="776" height="478" viewBox="0 0 776 478" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="2" y="2" width="772" height="474" stroke="#9B1B30" stroke-opacity="0.1" stroke-width="4"/>
+</svg>
+`,
     'x': (classes = '') => ``,
 
 
 
 }
+
+
+

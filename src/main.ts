@@ -1,4 +1,4 @@
-import './style.css';
+// import './style.css';
 import Alpine from 'alpinejs';
 import { icons } from './icons';
 
@@ -36,3 +36,30 @@ if (typeof window !== 'undefined') {
 
   Alpine.start();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+  // <div x-data="{
+  //           results: [
+  //             { id: '001', title: '150+', text: 'Cases Won' },
+  //             { id: '002', title: '98%', text: 'Success Rate' },
+  //             { id: '003', title: '15+', text: 'Years Experience' },
+  //             { id: '004', title: '$50M+', text: 'Recovered in Settlements' },
+  //           ]
+  //         }">
+
+  //         <template x-for="result in results" :key="result.id">
+  //           <div class="">
+  //             <div class="" x-text="result.title"></div>
+  //             <div class="" x-text="result.text"></div>
+  //           </div>
+  //         </template>

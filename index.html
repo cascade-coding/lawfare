@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,7 +24,7 @@
             <div x-data="iconComponent('call', '')" x-html="icon"></div>
             <span>Free Legal Call (555) 123-4567 </span>
           </button>
-        </div> 
+        </div>
 
         <div class="flex items-center justify-between">
           <div
@@ -66,7 +67,7 @@
       >
         <div class="pt-20 flex flex-col gap-y-5 lg:max-w-4xl 2xl:max-w-5xl">
           <h1
-            class="font-primary font-bold leading-[120%] tracking-[0.8px] text-[28px] md:text-[56px] xl:text-[64px] 2xl:text-[90px] text-accent"
+            class="pr-6 md:pr-28 font-primary font-bold leading-[120%] tracking-[0.8px] text-[28px] md:text-[56px] xl:text-[64px] 2xl:text-[74px] text-accent"
           >
             Focused on Results. Relentless Execution.
           </h1>
@@ -85,7 +86,7 @@
           </button>
 
           <h5
-            class="font-secondary font-semibold leading-[120%] tracking-[0.5px]  md:text-[18px] text-primary pl-3 py-2 rounded-md border-l-4 border-l-accent-dark-2"
+            class="font-secondary font-semibold leading-[120%] tracking-[0.5px] md:text-[18px] text-primary pl-3 py-2 rounded-md border-l-4 border-l-accent-dark-2"
           >
             Victor Kane <br />
             Senior Litigation Attorney
@@ -93,7 +94,9 @@
         </div>
       </div>
 
-      <div class="absolute -right-4 sm:right-0 inset-0 z-10 flex justify-end items-end">
+      <div
+        class="absolute -right-4 sm:right-0 2xl:-right-20 inset-0 z-10 flex justify-end items-end max-w-[1280px] mx-auto"
+      >
         <img
           src="/assets/lawyer.png"
           alt=""
@@ -102,6 +105,128 @@
         />
       </div>
     </section>
+
+    <!-- End: Hero Section -->
+
+    <!-- Start: Results Snapshot -->
+    <section class="py-8 sm:py-12 bg-gray-100 relative overflow-hidden">
+      <div class="absolute inset-0 flex justify-end items-end max-w-[1280px] mx-auto">
+        <div class="relative -translate-y-11/12 sm:-translate-y-1/2 translate-x-10/12 sm:translate-x-1/2">
+          <div
+            x-data="iconComponent('line', '')"
+            x-html="icon"
+          ></div>
+        </div>
+      </div>
+
+      <div>
+        <div
+          class="flex flex-col items-center justify-center gap-4 sm:gap-5 pt-5"
+        >
+          <h3
+            class="font-primary font-bold leading-[120%] tracking-[0.8px] text-[22px] sm:text-[28px] md:text-[48px] text-primary text-center"
+          >
+            Winning Is the Standard.
+          </h3>
+
+          <p
+            class="font-secondary font-semibold leading-[120%] tracking-[0.5px] text-[18px] text-gray-700 px-14 text-center"
+          >
+            Focused execution, proven outcomes — every case, every time.
+          </p>
+        </div>
+
+        <div
+          class="max-w-[1280px] mx-auto pt-8 md:pt-14 px-4 sm:px-6 flex flex-col lg:flex-row lg:justify-center gap-y-10"
+        >
+          <!-- Row 1 -->
+          <div
+            class="flex flex-col sm:flex-row items-center justify-center gap-y-6 sm:gap-x-6 w-full"
+          >
+            <!-- Card 1 -->
+            <div
+              class="flex flex-col items-center justify-center gap-y-5 text-center w-full"
+            >
+              <h4
+                class="font-primary font-bold text-[36px] md:text-[48px] text-accent tracking-[0.8px] leading-[120%]"
+              >
+                150+
+              </h4>
+              <p
+                class="font-secondary font-semibold text-[18px] md:text-[22px] text-gray-700 tracking-[0.5px] leading-[120%]"
+              >
+                Cases Won
+              </p>
+            </div>
+
+            <!-- Divider -->
+            <div class="w-16 h-[1px] bg-accent-dark-2 sm:w-[1px] sm:h-16"></div>
+
+            <!-- Card 2 -->
+            <div
+              class="flex flex-col items-center justify-center gap-y-5 text-center w-full"
+            >
+              <h4
+                class="font-primary font-bold text-[36px] md:text-[48px] text-accent tracking-[0.8px] leading-[120%]"
+              >
+                98%
+              </h4>
+              <p
+                class="font-secondary font-semibold text-[18px] md:text-[22px] text-gray-700 tracking-[0.5px] leading-[120%]"
+              >
+                Success Rate
+              </p>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div
+            class="flex flex-col sm:flex-row items-center justify-center gap-y-6 sm:gap-x-6 w-full"
+          >
+            <!-- Divider -->
+            <div
+              class="sm:hidden lg:block w-16 h-[1px] bg-accent-dark-2 sm:w-[1px] sm:h-16"
+            ></div>
+
+            <!-- Card 3 -->
+            <div
+              class="flex flex-col items-center justify-center gap-y-5 text-center w-full"
+            >
+              <h4
+                class="font-primary font-bold text-[36px] md:text-[48px] text-accent tracking-[0.8px] leading-[120%]"
+              >
+                15+
+              </h4>
+              <p
+                class="font-secondary font-semibold text-[18px] md:text-[22px] text-gray-700 tracking-[0.5px] leading-[120%]"
+              >
+                Years Experience
+              </p>
+            </div>
+
+            <!-- Divider -->
+            <div class="w-16 h-[1px] bg-accent-dark-2 sm:w-[1px] sm:h-16"></div>
+
+            <!-- Card 4 -->
+            <div
+              class="flex flex-col items-center justify-center gap-y-5 text-center w-full"
+            >
+              <h4
+                class="font-primary font-bold text-[36px] md:text-[48px] text-accent tracking-[0.8px] leading-[120%]"
+              >
+                $50M+
+              </h4>
+              <p
+                class="font-secondary font-semibold text-[18px] md:text-[22px] text-gray-700 tracking-[0.5px] leading-[120%]"
+              >
+                Recovered in Settlements
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End: Results Snapshot -->
 
     <script type="module" src="/src/main.ts"></script>
   </body>
