@@ -18,12 +18,13 @@
     <nav class="py-3 hidden md:block">
       <div class="max-w-[1280px] mx-auto px-3">
         <div class="flex items-center justify-end">
-          <button
-            class="flex items-center justify-center gap-x-2 bg-gray-100 px-2 py-1.5 rounded-sm font-semibold text-primary"
+          <a
+            href="tel:5551234567"
+            class="inline-flex items-center justify-center gap-x-2 bg-gray-100 px-2 py-1.5 rounded-sm font-semibold text-primary"
           >
             <div x-data="iconComponent('call', '')" x-html="icon"></div>
-            <span>Free Legal Call (555) 123-4567 </span>
-          </button>
+            <span>Free Legal Call (555) 123-4567</span>
+          </a>
         </div>
 
         <div class="flex items-center justify-between">
@@ -110,16 +111,17 @@
 
     <!-- Start: Results Snapshot -->
     <section class="py-8 sm:py-12 bg-gray-100 relative overflow-hidden">
-      <div class="absolute inset-0 flex justify-end items-end max-w-[1280px] mx-auto">
-        <div class="relative -translate-y-11/12 sm:-translate-y-1/2 translate-x-10/12 sm:translate-x-1/2">
-          <div
-            x-data="iconComponent('line', '')"
-            x-html="icon"
-          ></div>
+      <div
+        class="absolute inset-0 flex justify-end items-end max-w-[1280px] mx-auto"
+      >
+        <div
+          class="relative -translate-y-11/12 sm:-translate-y-1/2 translate-x-10/12 sm:translate-x-1/2"
+        >
+          <div x-data="iconComponent('line', '')" x-html="icon"></div>
         </div>
       </div>
 
-      <div>
+      <div class="relative z-50">
         <div
           class="flex flex-col items-center justify-center gap-4 sm:gap-5 pt-5"
         >
@@ -227,6 +229,72 @@
       </div>
     </section>
     <!-- End: Results Snapshot -->
+
+    <!-- Start: Practice Area -->
+    <section class="py-8 sm:py-12 bg-white relative overflow-hidden">
+      <div
+        class="absolute inset-0 flex justify-start items-start max-w-[1280px] mx-auto"
+      >
+        <div
+          class="relative -translate-y-[80%] sm:-translate-y-1/2 -translate-x-10/12 sm:-translate-x-[80%]"
+        >
+          <div x-data="iconComponent('line', '')" x-html="icon"></div>
+        </div>
+      </div>
+
+      <div class="relative z-50">
+        <div
+          class="flex flex-col items-center justify-center gap-4 sm:gap-5 pt-5"
+        >
+          <h3
+            class="font-primary font-bold leading-[120%] tracking-[0.8px] text-[22px] sm:text-[28px] md:text-[48px] text-primary text-center"
+          >
+            Areas of Practice
+          </h3>
+
+          <p
+            class="font-secondary font-semibold leading-[120%] tracking-[0.5px] text-[18px] text-gray-700 px-14 text-center"
+          >
+            Specialized representation in high-stakes legal matters
+          </p>
+        </div>
+
+        <div
+          x-data="{
+            practice_cards: [
+              { id: '001', icon: iconComponent('sword', ''), title: 'Defamation & Reputation', desc: 'Swift action against false accusations that damage your name or business.' },
+              { id: '002', icon: iconComponent('business', ''), title: 'Business Litigation', desc: 'Strategic counsel in complex commercial disputes.' },
+              { id: '003', icon: iconComponent('scale', ''), title: 'Fraud & Deceit ', desc: 'Uncovering and litigating financial misconduct.' },
+              { id: '004', icon: iconComponent('suitcase', ''), title: 'Employment Retaliation', desc: 'Holding employers accountable for wrongful actions.' },
+            ]
+          }"
+          class="max-w-[1280px] mx-auto pt-8 md:pt-14 px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 xl:gap-12 place-items-center"
+        >
+          <template x-for="card in practice_cards" :key="card.id">
+            <div
+              class="practice_card w-full sm:w-[400px] md:w-full shadow-sm hover:shadow-md border-l-4 border-accent-dark-2 rounded-lg flex flex-col gap-y-5 px-3 py-2 lg:max-w-[400px] md:min-h-[220px]"
+            >
+              <div x-data="card.icon" x-html="icon" class="icon"></div>
+
+              <div class="flex flex-col gap-y-4 md:gap-y-0">
+                <h4
+                  class="md:min-h-[70px] font-primary font-bold text-[20px] md:text-[24px] text-primary tracking-[0.8px] leading-[120%]"
+                  x-text="card.title"
+                >
+                  Defamation & Reputation
+                </h4>
+
+                <p
+                  class="font-base font-medium leading-[150%]"
+                  x-text="card.desc"
+                ></p>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+    <!-- End: Practice Area -->
 
     <script type="module" src="/src/main.ts"></script>
   </body>

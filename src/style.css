@@ -29,3 +29,8 @@ body {
     }
   }
 }
+
+.practice_card:hover svg path {
+  stroke: var(--color-accent);
+  transition: all 300ms;
+}
