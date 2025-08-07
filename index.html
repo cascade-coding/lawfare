@@ -255,7 +255,7 @@
           <p
             class="font-secondary font-semibold leading-[120%] tracking-[0.5px] text-[18px] text-gray-700 px-14 text-center"
           >
-            Specialized representation in high-stakes legal matters
+            Specialized representation in high-stakes legal matters.
           </p>
         </div>
 
@@ -295,6 +295,67 @@
       </div>
     </section>
     <!-- End: Practice Area -->
+
+    <!-- Start: Client Responses -->
+    <section class="py-8 sm:py-12 bg-gray-100 relative overflow-hidden">
+      <div class="">
+        <div
+          class="flex flex-col items-center justify-center gap-4 sm:gap-5 pt-5"
+        >
+          <h3
+            class="font-primary font-bold leading-[120%] tracking-[0.8px] text-[22px] sm:text-[28px] md:text-[48px] text-primary text-center"
+          >
+            What Our Clients Say
+          </h3>
+
+          <p
+            class="font-secondary font-semibold leading-[120%] tracking-[0.5px] text-[18px] text-gray-700 px-14 text-center"
+          >
+            Client trust, earned through outcomes.
+          </p>
+        </div>
+
+        <div
+          x-data="{
+            response_cards: [
+              { id: '001', quote: 'When other attorneys hesitated, Victor took control. Within weeks, my lawsuit was in motion and the opposition folded fast.', name: 'Daniel Brooks', position: 'Real Estate Developer' },
+              { id: '002', quote: 'I was up against a major corporation — Victor made them bleed. He knew exactly how to win without dragging it out.', name: 'Jorge Ramirez', position: 'Construction Company Owner' },
+              { id: '003', quote: 'Victor understood my business risk better than I did. His legal strategy was precise, aggressive, and highly effective.', name: 'Maya Chen', position: 'Tech Startup Founder' },
+              { id: '004', quote: 'What impressed me most wasn’t just the outcome, but how fast and confidently Victor moved. No fluff — just results.', name: 'Elaine Porter', position: 'Healthcare Executive' },
+            ]
+          }"
+          class="max-w-[800px] mx-auto pt-8 md:pt-14 px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-7 xl:gap-12 place-items-center items-stretch"
+        >
+          <template x-for="card in response_cards" :key="card.id">
+            <div
+              class="bg-white w-full sm:w-[400px] md:w-full shadow-sm hover:shadow-md border-l-3 border-accent-dark-2 rounded-md flex flex-col gap-y-5 px-3 py-2 lg:max-w-[400px] md:min-h-[220px]"
+            >
+              <div class="flex flex-col gap-y-5 md:gap-y-6 pt-4">
+                <div class="md:min-h-[80px]">
+                  <p
+                    class="font-secondary font-medium italic text-[20px] text-gray-700 tracking-[0.5px] leading-[120%]"
+                    x-text="card.quote"
+                  ></p>
+                </div>
+
+                <div class="flex flex-col gap-1">
+                  <p
+                    class="font-secondary font-bold text-[20px] text-gray-700 tracking-[0.5px] leading-[120%]"
+                    x-text="card.name"
+                  ></p>
+
+                  <p
+                    class="font-secondary font-normal text-[14px] text-gray-700 tracking-[0.5px] leading-[120%]"
+                    x-text="card.position"
+                  ></p>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+    <!-- End: Client Responses -->
 
     <script type="module" src="/src/main.ts"></script>
   </body>
