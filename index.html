@@ -69,34 +69,36 @@
           </button>
 
           <!-- mobile menu -->
-          <div
-            class="mobile_menu bg-gray-100 p-4 min-h-[280px] sm:hidden absolute z-50 inset-0 top-[100%]"
-          >
-            <ul
-              class="menu flex flex-col items-end justify-center gap-[18px] select-none"
+          <div class="absolute inset-0 top-[100%] z-50 overflow-x-clip">
+            <div
+              class="mobile_menu bg-gray-100 p-4 min-h-[280px] sm:hidden"
             >
-              <li
-                class="hover:*:text-accent inline-block w-full text-right transition border-b-2 border-transparent hover:border-b-accent-dark-2"
+              <ul
+                class="menu flex flex-col items-end justify-center gap-[18px] select-none"
               >
-                <a href="#intro" class="inline-block w-full transition"
-                  >About</a
+                <li
+                  class="hover:*:text-accent inline-block w-full text-right transition border-b-2 border-transparent hover:border-b-accent-dark-2"
                 >
-              </li>
-              <li
-                class="hover:*:text-accent inline-block w-full text-right transition border-b-2 border-transparent hover:border-b-accent-dark-2"
-              >
-                <a href="#victories" class="inline-block w-full transition"
-                  >Victories</a
+                  <a href="#intro" class="inline-block w-full transition"
+                    >About</a
+                  >
+                </li>
+                <li
+                  class="hover:*:text-accent inline-block w-full text-right transition border-b-2 border-transparent hover:border-b-accent-dark-2"
                 >
-              </li>
-              <li
-                class="hover:*:text-accent inline-block w-full text-right transition border-b-2 border-transparent hover:border-b-accent-dark-2"
-              >
-                <a href="#contact" class="inline-block w-full transition"
-                  >Contact</a
+                  <a href="#victories" class="inline-block w-full transition"
+                    >Victories</a
+                  >
+                </li>
+                <li
+                  class="hover:*:text-accent inline-block w-full text-right transition border-b-2 border-transparent hover:border-b-accent-dark-2"
                 >
-              </li>
-            </ul>
+                  <a href="#contact" class="inline-block w-full transition"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -627,7 +629,9 @@
         </div>
       </div>
 
-      <div class="py-5 text-center text-sm text-gray-200 bg-zinc-700">
+      <div
+        class="py-5 text-center text-sm text-gray-200 bg-zinc-700 select-none"
+      >
         © 2025 Lawfare Firm. All rights reserved.
       </div>
     </footer>
