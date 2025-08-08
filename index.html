@@ -35,13 +35,13 @@
 
           <ul class="flex items-center justify-center gap-x-16">
             <li>
-              <a href="#">About</a>
+              <a href="#intro">About</a>
             </li>
             <li>
-              <a href="#">Victories</a>
+              <a href="#victories">Victories</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -80,11 +80,12 @@
         </div>
 
         <div class="pt-6 flex flex-col gap-y-5">
-          <button
+          <a
+            href="#contact"
             class="bg-accent w-max font-normal sm:font-semibold py-1.5 px-4 sm:py-2.5 sm:px-7 rounded-sm tracking-[0.8px] border-2 border-accent-dark-2 text-gray-50 hover:cursor-pointer hover:bg-accent-dark-1 transition"
           >
             Start Your Case
-          </button>
+          </a>
 
           <h5
             class="font-secondary font-semibold leading-[120%] tracking-[0.5px] md:text-[18px] text-primary pl-3 py-2 rounded-md border-l-4 border-l-accent-dark-2"
@@ -110,7 +111,10 @@
     <!-- End: Hero Section -->
 
     <!-- Start: Results Snapshot -->
-    <section class="py-8 sm:py-12 bg-gray-100 relative overflow-hidden">
+    <section
+      class="py-[70px] sm:py-[80px] bg-gray-100 relative overflow-hidden"
+      id="victories"
+    >
       <div
         class="absolute inset-0 flex justify-end items-end max-w-[1280px] mx-auto"
       >
@@ -122,9 +126,7 @@
       </div>
 
       <div class="relative z-50">
-        <div
-          class="flex flex-col items-center justify-center gap-4 sm:gap-5 pt-5"
-        >
+        <div class="flex flex-col items-center justify-center gap-4 sm:gap-5">
           <h3
             class="font-primary font-bold leading-[120%] tracking-[0.8px] text-[22px] sm:text-[28px] md:text-[48px] text-primary text-center"
           >
@@ -231,7 +233,10 @@
     <!-- End: Results Snapshot -->
 
     <!-- Start: Practice Area -->
-    <section class="py-8 sm:py-12 bg-white relative overflow-hidden">
+    <section
+      class="py-[70px] sm:py-[80px] bg-white relative overflow-hidden"
+      id="practice_areas"
+    >
       <div
         class="absolute inset-0 flex justify-start items-start max-w-[1280px] mx-auto"
       >
@@ -243,9 +248,7 @@
       </div>
 
       <div class="relative z-50">
-        <div
-          class="flex flex-col items-center justify-center gap-4 sm:gap-5 pt-5"
-        >
+        <div class="flex flex-col items-center justify-center gap-4 sm:gap-5">
           <h3
             class="font-primary font-bold leading-[120%] tracking-[0.8px] text-[22px] sm:text-[28px] md:text-[48px] text-primary text-center"
           >
@@ -297,11 +300,12 @@
     <!-- End: Practice Area -->
 
     <!-- Start: Client Responses -->
-    <section class="py-8 sm:py-12 bg-gray-100 relative overflow-hidden">
+    <section
+      class="py-[70px] sm:py-[80px] bg-gray-100 relative overflow-hidden"
+      id="client_responses"
+    >
       <div class="">
-        <div
-          class="flex flex-col items-center justify-center gap-4 sm:gap-5 pt-5"
-        >
+        <div class="flex flex-col items-center justify-center gap-4 sm:gap-5">
           <h3
             class="font-primary font-bold leading-[120%] tracking-[0.8px] text-[22px] sm:text-[28px] md:text-[48px] text-primary text-center"
           >
@@ -356,6 +360,92 @@
       </div>
     </section>
     <!-- End: Client Responses -->
+
+    <!-- Start: Introduction -->
+    <section
+      class="py-[70px] sm:py-[80px] sm:pb-[100px] bg-primary relative overflow-hidden"
+      id="intro"
+    >
+      <div class="">
+        <div class="flex flex-col items-center justify-center gap-4 sm:gap-5">
+          <h3
+            class="font-primary font-bold leading-[120%] tracking-[0.8px] text-[22px] sm:text-[28px] md:text-[48px] text-gray-50 text-center"
+          >
+            What to Expect
+          </h3>
+
+          <p
+            class="font-secondary font-semibold leading-[120%] tracking-[0.5px] text-[18px] text-gray-50 px-14 text-center"
+          >
+            We make legal action simple. Here's how we start building your case
+            — fast and focused.
+          </p>
+        </div>
+
+        <div
+          class="max-w-[1280px] mx-auto pt-8 md:pt-14 px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-12"
+        >
+          <div>
+            <p
+              class="font-secondary font-semibold leading-[150%] tracking-[0.5px] text-gray-50"
+            >
+              If you have a case ready for resolution, contact us immediately at
+              (555) 123‑4567 for a complimentary case review. No lengthy forms
+              or unnecessary delays — just clear, expert guidance from a
+              seasoned legal team. We recognize the importance of time and act
+              with precision and urgency on your behalf. Whether you seek to
+              secure your rightful claim or defend against unfounded
+              allegations, our commitment to justice and results is unwavering.
+              Avoid the complexities of the legal system alone — initiate the
+              call that can determine your outcome. Your case begins with one
+              decisive conversation.
+            </p>
+
+            <a
+              href="tel:5551234567"
+              class="bg-accent flex items-center mt-6 gap-x-4 w-max font-normal sm:font-semibold py-1.5 px-4 sm:py-2.5 sm:px-6 rounded-sm tracking-[0.8px] border-2 border-accent-dark-2 text-gray-50 hover:cursor-pointer hover:bg-accent-dark-1 transition"
+            >
+              <div
+                x-data="iconComponent('call', '**:fill-gray-50')"
+                x-html="icon"
+              ></div>
+              <span>Free Case Review</span>
+            </a>
+          </div>
+
+          <video class="w-full lg:max-w-3xl mx-auto" controls loop playsinline>
+            <source src="/assets/intro-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+    <!-- End: Introduction -->
+
+    <!-- Start: Contact -->
+    <section
+      class="py-[70px] sm:py-[80px] bg-gray-100 relative overflow-hidden"
+      id="contact"
+    >
+      <div class="">
+        <div class="flex flex-col items-center justify-center gap-4 sm:gap-5">
+          <h3
+            class="font-primary font-bold leading-[120%] tracking-[0.8px] text-[22px] sm:text-[28px] md:text-[48px] text-primary text-center"
+          >
+            Let’s Talk About Your Case
+          </h3>
+        </div>
+
+        <div class="max-w-[1280px] mx-auto pt-8 md:pt-14 px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-7 xl:gap-12 place-items-center items-stretch">
+          
+
+
+
+
+        </div>
+      </div>
+    </section>
+    <!-- End: Contact -->
 
     <script type="module" src="/src/main.ts"></script>
   </body>
