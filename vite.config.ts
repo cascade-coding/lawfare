@@ -5,6 +5,8 @@ export default defineConfig({
     tailwindcss(),
   ],
 
+  base: "/lawfare/",
+
   server: {
     host: true,
     allowedHosts: true
