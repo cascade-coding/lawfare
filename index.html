@@ -15,25 +15,28 @@
   </head>
   <body>
     <!-- Start: Top Header -->
-    <nav class="py-3 hidden md:block">
-      <div class="max-w-[1280px] mx-auto px-3">
-        <div class="flex items-center justify-end">
+    <nav class="pt-0 sm:py-3">
+      <div class="max-w-[1280px] mx-auto">
+        <div class="flex items-center justify-end sm:px-4">
           <a
             href="tel:5551234567"
-            class="inline-flex items-center justify-center gap-x-2 bg-gray-100 px-2 py-1.5 rounded-sm font-semibold text-primary"
+            class="w-full sm:w-auto inline-flex items-center justify-end sm:justify-center gap-x-2 bg-gray-100 px-2 py-1.5 rounded-sm font-semibold text-primary"
           >
             <div x-data="iconComponent('call', '')" x-html="icon"></div>
             <span>Free Legal Call (555) 123-4567</span>
           </a>
         </div>
 
-        <div class="flex items-center justify-between">
+        <div class="relative flex items-center justify-between px-3 sm:px-4">
           <div
             x-data="iconComponent('logo', 'w-[120px] md:w-[190px] 2xl:w-[220px]')"
             x-html="icon"
           ></div>
 
-          <ul class="flex items-center justify-center gap-x-16">
+          <!-- large menu -->
+          <ul
+            class="hidden sm:flex items-center justify-center gap-x-16 select-none"
+          >
             <li>
               <a href="#intro">About</a>
             </li>
@@ -44,6 +47,57 @@
               <a href="#contact">Contact</a>
             </li>
           </ul>
+
+          <button
+            class="menu_trigger block sm:hidden hover:**:stroke-accent **:transition cursor-pointer"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 12H20M4 18H20M4 6H20"
+                stroke="#1A1A1A"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <!-- mobile menu -->
+          <div
+            class="mobile_menu bg-gray-100 p-4 min-h-[280px] sm:hidden absolute z-50 inset-0 top-[100%]"
+          >
+            <ul
+              class="menu flex flex-col items-end justify-center gap-[18px] select-none"
+            >
+              <li
+                class="hover:*:text-accent inline-block w-full text-right transition border-b-2 border-transparent hover:border-b-accent-dark-2"
+              >
+                <a href="#intro" class="inline-block w-full transition"
+                  >About</a
+                >
+              </li>
+              <li
+                class="hover:*:text-accent inline-block w-full text-right transition border-b-2 border-transparent hover:border-b-accent-dark-2"
+              >
+                <a href="#victories" class="inline-block w-full transition"
+                  >Victories</a
+                >
+              </li>
+              <li
+                class="hover:*:text-accent inline-block w-full text-right transition border-b-2 border-transparent hover:border-b-accent-dark-2"
+              >
+                <a href="#contact" class="inline-block w-full transition"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -540,7 +594,9 @@
 
     <!-- Start: Footer -->
     <footer class="bg-primary mt-[80px]">
-      <div class="max-w-[1280px] mx-auto py-[50px] px-4 md:px-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-10">
+      <div
+        class="max-w-[1280px] mx-auto py-[50px] px-4 md:px-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-10"
+      >
         <div>
           <svg
             width="183"
@@ -565,18 +621,9 @@
         </div>
 
         <div class="flex items-center justify-end gap-x-6">
-          <div
-            x-data="iconComponent('linkedin', '')"
-            x-html="icon"
-          ></div>
-          <div
-            x-data="iconComponent('twitter', '')"
-            x-html="icon"
-          ></div>
-          <div
-            x-data="iconComponent('instagram', '')"
-            x-html="icon"
-          ></div>
+          <div x-data="iconComponent('linkedin', '')" x-html="icon"></div>
+          <div x-data="iconComponent('twitter', '')" x-html="icon"></div>
+          <div x-data="iconComponent('instagram', '')" x-html="icon"></div>
         </div>
       </div>
 

@@ -39,27 +39,39 @@ if (typeof window !== 'undefined') {
 
 
 
+// mobile nav
+
+const trigger = document.querySelector(".menu_trigger") as HTMLElement | null;
+const mobileMenu = document.querySelector(".mobile_menu") as HTMLElement | null;
+
+function closeMenu(): void {
+  mobileMenu?.classList.remove("open_menu");
+}
+
+trigger?.addEventListener("click", (e: MouseEvent) => {
+  e.stopPropagation();
+  mobileMenu?.classList.toggle("open_menu");
+});
+
+window.addEventListener("click", (e: MouseEvent) => {
+  const target = e.target as Node;
+
+  if (
+    mobileMenu?.classList.contains("open_menu") &&
+    !mobileMenu.contains(target) &&
+    !trigger?.contains(target)
+  ) {
+    closeMenu();
+  }
+});
+
+// Close on menu link click
+if (mobileMenu) {
+  const links = mobileMenu.querySelectorAll("a");
+  links.forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+}
 
 
 
-
-
-
-
-
-
-  // <div x-data="{
-  //           results: [
-  //             { id: '001', title: '150+', text: 'Cases Won' },
-  //             { id: '002', title: '98%', text: 'Success Rate' },
-  //             { id: '003', title: '15+', text: 'Years Experience' },
-  //             { id: '004', title: '$50M+', text: 'Recovered in Settlements' },
-  //           ]
-  //         }">
-
-  //         <template x-for="result in results" :key="result.id">
-  //           <div class="">
-  //             <div class="" x-text="result.title"></div>
-  //             <div class="" x-text="result.text"></div>
-  //           </div>
-  //         </template>

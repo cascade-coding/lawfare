@@ -14,6 +14,7 @@
 
 body {
   font-family: "Inter", sans-serif;
+  color: var(--color-primary);
 }
 
 @layer utilities {
@@ -33,4 +34,27 @@ body {
 .practice_card:hover svg path {
   stroke: var(--color-accent);
   transition: all 300ms;
+}
+
+
+/* Mobile menu wrapper */
+.mobile_menu {
+  user-select: none;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 300ms ease, transform 300ms ease;
+  transform: translateX(100%); 
+}
+
+/* Active menu state */
+.mobile_menu.open_menu {
+  user-select: auto;
+  pointer-events: all;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Optional inner menu animation */
+.mobile_menu .menu {
+  transition: transform 500ms ease-in-out;
 }
