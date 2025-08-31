@@ -2,7 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,10 +33,12 @@
         </div>
 
         <div class="relative flex items-center justify-between px-3 sm:px-4">
-          <div
-            x-data="iconComponent('logo', 'w-[120px] md:w-[190px] 2xl:w-[220px]')"
-            x-html="icon"
-          ></div>
+          <a href="/lawfare/">
+            <div
+              x-data="iconComponent('logo', 'w-[120px] md:w-[190px] 2xl:w-[220px]')"
+              x-html="icon"
+            ></div>
+          </a>
 
           <!-- large menu -->
           <ul
@@ -41,10 +48,14 @@
               <a href="#intro" class="hover:text-accent transition">About</a>
             </li>
             <li>
-              <a href="#victories" class="hover:text-accent transition">Victories</a>
+              <a href="#victories" class="hover:text-accent transition"
+                >Victories</a
+              >
             </li>
             <li>
-              <a href="#contact" class="hover:text-accent transition">Contact</a>
+              <a href="#contact" class="hover:text-accent transition"
+                >Contact</a
+              >
             </li>
           </ul>
 
@@ -70,9 +81,7 @@
 
           <!-- mobile menu -->
           <div class="absolute inset-0 top-[100%] z-50 overflow-x-clip">
-            <div
-              class="mobile_menu bg-gray-100 p-4 min-h-[280px] sm:hidden"
-            >
+            <div class="mobile_menu bg-gray-100 p-4 min-h-[280px] sm:hidden">
               <ul
                 class="menu flex flex-col items-end justify-center gap-[18px] select-none"
               >
